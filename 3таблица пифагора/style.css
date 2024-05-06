@@ -1,0 +1,51 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #e0f7fa; /* Светло-голубой фон */
+}
+
+h1 {
+    text-align: center;
+    color: #f44336;
+}
+
+#pythagoras-table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+#pythagoras-table td {
+    border: 2px solid #ffc107; /* Оранжевая граница */
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 10px; /* Закругленные углы */
+}
+
+#pythagoras-table td:hover {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+#result {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #9c27b0;
+}
+
+.cloud {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    animation: appear 0.5s ease forwards;
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: translateY(20px); }
+    50% { opacity: 1; transform: translateY(-10px) rotate(-5deg); } /* Подпрыгивание и вращение */
+    100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
