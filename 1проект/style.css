@@ -1,0 +1,85 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f0f0; /* Светло-серый фон */
+  background-image: url('смеш.png'); /* Добавляем фоновое изображение */
+  background-repeat: no-repeat; /* Повторяем изображение один раз */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+}
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px; /* Добавляем внутренние отступы */
+  background-color: #fff; /* Белый фон для игровой области */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+#time, #example, #result, #errorInfo {
+  margin: 15px;
+  font-size: 28px; /* Увеличиваем размер шрифта */
+}
+
+#options button {
+  padding: 15px 30px; /* Увеличиваем размер кнопок */
+  margin: 10px;
+  font-size: 24px; 
+  background-color: #4CAF50; /* Зеленый фон для кнопок */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Скругленные углы */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Добавляем плавный переход */
+}
+
+#options button:hover {
+  background-color: #3e8e41; /* Более темный оттенок зеленого при наведении */
+}
+
+#nextLevelButton {
+  display: none;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: #008CBA; /* Синий фон для кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+#nextLevelButton:hover {
+  background-color: #007399; /* Более темный оттенок синего при наведении */
+}
+#character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.character {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.character:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.character-name {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+}
