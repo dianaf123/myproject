@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.counter {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sticks {
+    display: flex;
+    justify-content: center;
+}
+
+.stick {
+    width: 50px;
+    height: 150px;
+    background-color: #f00; /* Красный цвет по умолчанию */
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px; 
+    transition: transform 0.2s ease, background-color 0.2s ease; 
+}
+
+.stick:hover {
+    transform: scale(1.1); 
+}
+
+.stick.selected {
+    background-color: #0f0; 
+    animation: wiggle 0.5s infinite; 
+}
+
+.stick:not(.selected) {
+    background-color: #f00; /* Базовый цвет */
+}
+
+@keyframes wiggle {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
